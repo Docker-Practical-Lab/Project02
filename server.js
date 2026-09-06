@@ -20,7 +20,7 @@ app.listen(PORT, () => {
 // Root route
 app.get('/posts', async (req, res) => {
   try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts?limit=10');
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts?limit=40');
     const posts = await response.json();
     res.status(200).json(posts);
   } catch (error) {
